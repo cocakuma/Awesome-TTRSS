@@ -90,7 +90,7 @@ RUN chmod -x /wait-for.sh && chmod -x /docker-entrypoint.sh && apk add --update 
   php7-pgsql php7-mcrypt php7-session php7-pdo php7-pdo_pgsql \
   ca-certificates && rm -rf /var/cache/apk/* \
   # Update libiconv as the default version is too low
-  && apk add --no-cache --repository http://mirrors.aliyun.com/alpine/edge/community gnu-libiconv --allow-untrusted \
+  && apk add --update --update-cache --repository http://mirrors.aliyun.com/alpine/edge/community gnu-libiconv --allow-untrusted \
   && rm -rf /var/www 
 
 # Copy TTRSS and plugins
